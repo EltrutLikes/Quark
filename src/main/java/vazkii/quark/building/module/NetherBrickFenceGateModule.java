@@ -23,7 +23,7 @@ public class NetherBrickFenceGateModule extends Module {
                 Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
                 .func_235861_h_() // needs tool
         		.harvestTool(ToolType.PICKAXE)
-                .sound(SoundType.field_235590_L_)
+                .sound(SoundType.NETHER_BRICK)
                 .hardnessAndResistance(2.0F, 6.0F));
     }
 }

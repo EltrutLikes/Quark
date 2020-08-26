@@ -38,7 +38,7 @@ public class CompassAngleGetter {
 
 	public static void tickCompass(PlayerEntity player, ItemStack stack) {
 		boolean calculated = isCalculated(stack);
-		boolean nether = player.world.func_234922_V_().func_240901_a_().equals(Dimension.field_236054_c_.func_240901_a_()); // getDimensionType().resourceLocation, THE_NETHER_KEY.resourceLocation()
+		boolean nether = player.world.func_234922_V_().func_240901_a_().equals(Dimension.THE_NETHER.func_240901_a_()); // getDimensionType().resourceLocation, THE_NETHER_KEY.resourceLocation()
 		
 		if(calculated) {
 			boolean wasInNether = ItemNBTHelper.getBoolean(stack, TAG_WAS_IN_NETHER, false);
@@ -99,9 +99,9 @@ public class CompassAngleGetter {
 			if(lodestonePos != null) {
 				calculate = true;
 				target = lodestonePos;
-			} else if(dimension.equals(Dimension.field_236055_d_.func_240901_a_()) && CompassesWorkEverywhereModule.enableEnd) // resourceLocation, THE_END_KEY.getResourceLocation()
+			} else if(dimension.equals(Dimension.THE_END.func_240901_a_()) && CompassesWorkEverywhereModule.enableEnd) // resourceLocation, THE_END_KEY.getResourceLocation()
 				calculate = true;
-			else if(dimension.equals(Dimension.field_236054_c_.func_240901_a_()) && isCalculated(stack) && CompassesWorkEverywhereModule.enableNether) { // resourceLocation, THE_END_KEY.getResourceLocation()
+			else if(dimension.equals(Dimension.THE_NETHER.func_240901_a_()) && isCalculated(stack) && CompassesWorkEverywhereModule.enableNether) { // resourceLocation, THE_END_KEY.getResourceLocation()
 				boolean set = ItemNBTHelper.getBoolean(stack, TAG_POSITION_SET, false);
 				if(set) {
 					int x = ItemNBTHelper.getInt(stack, TAG_NETHER_TARGET_X, 0);

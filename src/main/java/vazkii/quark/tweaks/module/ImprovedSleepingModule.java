@@ -147,7 +147,7 @@ public class ImprovedSleepingModule extends Module {
 		MinecraftServer server = world.getServer();
 
 		if (event.side == LogicalSide.CLIENT ||
-				world.func_234922_V_() != DimensionType.field_235999_c_ ||
+				world.func_234922_V_() != DimensionType.OVERWORLD ||
 				event.phase != TickEvent.Phase.END ||
 				server == null)
 			return;
@@ -210,7 +210,7 @@ public class ImprovedSleepingModule extends Module {
 
 			TranslationTextComponent hoverText = new TranslationTextComponent("quark.misc.sleeping_list_header", sleepingList);
 
-			HoverEvent hover = new HoverEvent(Action.field_230550_a_, hoverText.func_230532_e_());
+			HoverEvent hover = new HoverEvent(Action.SHOW_TEXT, hoverText.func_230532_e_());
 			sibling.func_240703_c_(sibling.getStyle().func_240716_a_(hover));
 			sibling.getStyle().setUnderlined(true);
 

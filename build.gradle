@@ -8,6 +8,9 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
+plugins {
+       id "com.wynprice.cursemaven" version "2.1.1"
+}
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
@@ -96,7 +99,9 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${config.mc_version}-${config.forge_version}"
 
-    compile fg.deobf("vazkii.autoreglib:AutoRegLib:${config.arl_version}")
+    //compile fg.deobf("vazkii.autoreglib:AutoRegLib:${config.arl_version}")
+	//deobfCompile "curse.maven:autoreglib:3040924"
+	implementation fg.deobf("curse.maven:autoreglib:3040924")
   
     compileOnly fg.deobf("mezz.jei:jei-${config.mc_version}:${config.jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${config.mc_version}:${config.jei_version}")

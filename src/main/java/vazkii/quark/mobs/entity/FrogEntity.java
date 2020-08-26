@@ -104,8 +104,8 @@ public class FrogEntity extends AnimalEntity implements IEntityAdditionalSpawnDa
 
 	public static AttributeModifierMap.MutableAttribute prepareAttributes() {
         return MobEntity.func_233666_p_()
-                .func_233815_a_(Attributes.field_233818_a_, 10.0D) // MAX_HEALTH
-                .func_233815_a_(Attributes.field_233821_d_, 0.25D); // MOEVMENT_SPEED
+                .func_233815_a_(Attributes.MAX_HEALTH, 10.0D)
+                .func_233815_a_(Attributes.MOVEMENT_SPEED, 0.25D);
     }
 	
 	@Nonnull

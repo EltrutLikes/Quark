@@ -172,11 +172,11 @@ public class CrabEntity extends AnimalEntity implements IEntityAdditionalSpawnDa
 
 	public static AttributeModifierMap.MutableAttribute prepareAttributes() {
 		return MobEntity.func_233666_p_()
-				.func_233815_a_(Attributes.field_233818_a_, 20.0D) // MAX_HEALTH
-				.func_233815_a_(Attributes.field_233821_d_, 0.25D) // MOEVMENT_SPEED
-				.func_233815_a_(Attributes.field_233826_i_, 3.0D) // ARMOR
-				.func_233815_a_(Attributes.field_233827_j_, 2.0D) // ARMOR_TOUGHNESS
-				.func_233815_a_(Attributes.field_233820_c_, 0.5D); // KNOCKBACK_RESISTANCE
+				.func_233815_a_(Attributes.MAX_HEALTH, 20.0D)
+				.func_233815_a_(Attributes.MOVEMENT_SPEED, 0.25D)
+				.func_233815_a_(Attributes.ARMOR, 3.0D)
+				.func_233815_a_(Attributes.ARMOR_TOUGHNESS, 2.0D)
+				.func_233815_a_(Attributes.KNOCKBACK_RESISTANCE, 0.5D);
 	}
 
 	@Override
@@ -251,9 +251,9 @@ public class CrabEntity extends AnimalEntity implements IEntityAdditionalSpawnDa
 		if (sizeMod <= 15) {
 
 			// func_233767_b_ = applyModifier
-			this.getAttribute(Attributes.field_233818_a_).func_233767_b_(new AttributeModifier("Lightning Bonus", 0.5, Operation.ADDITION)); // MAX_HEALTH
-			this.getAttribute(Attributes.field_233821_d_).func_233767_b_(new AttributeModifier("Lightning Debuff", -0.05, Operation.ADDITION)); // MOVEMENT_SPEED
-			this.getAttribute(Attributes.field_233826_i_).func_233767_b_(new AttributeModifier("Lightning Bonus", 0.125, Operation.ADDITION)); // ARMOR
+			this.getAttribute(Attributes.MAX_HEALTH).func_233767_b_(new AttributeModifier("Lightning Bonus", 0.5, Operation.ADDITION));
+			this.getAttribute(Attributes.MOVEMENT_SPEED).func_233767_b_(new AttributeModifier("Lightning Debuff", -0.05, Operation.ADDITION));
+			this.getAttribute(Attributes.ARMOR).func_233767_b_(new AttributeModifier("Lightning Bonus", 0.125, Operation.ADDITION));
 
 			float sizeModifier = Math.min(sizeMod + 1, 16);
 			this.dataManager.set(SIZE_MODIFIER, sizeModifier);

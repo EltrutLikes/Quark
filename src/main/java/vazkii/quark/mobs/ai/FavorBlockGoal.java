@@ -86,7 +86,7 @@ public class FavorBlockGoal extends Goal {
 	}
 
 	private boolean searchForDestination() {
-		double followRange = creature.getAttribute(Attributes.field_233819_b_).getValue(); // FOLLOW_RANGE
+		double followRange = creature.getAttribute(Attributes.FOLLOW_RANGE).getValue();
 		Vector3d cpos = creature.getPositionVec();
 		double xBase = cpos.x;
 		double yBase = cpos.y;

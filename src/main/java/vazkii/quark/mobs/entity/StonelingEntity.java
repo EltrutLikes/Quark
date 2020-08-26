@@ -112,8 +112,8 @@ public class StonelingEntity extends CreatureEntity {
 
 	public static AttributeModifierMap.MutableAttribute prepareAttributes() {
         return MobEntity.func_233666_p_()
-                .func_233815_a_(Attributes.field_233818_a_, 8.0D) // MAX_HEALTH
-                .func_233815_a_(Attributes.field_233820_c_, 1D); // KNOCKBACK_RESISTANCE
+                .func_233815_a_(Attributes.MAX_HEALTH, 8.0D)
+                .func_233815_a_(Attributes.KNOCKBACK_RESISTANCE, 1D);
     }
 
 	@Override

@@ -223,7 +223,7 @@ public class FoxhoundEntity extends WolfEntity implements IMob {
 		}
 
 		boolean flag = entityIn.attackEntityFrom(DamageSource.causeMobDamage(this).setFireDamage(),
-				((int)this.func_233637_b_(Attributes.field_233823_f_)));
+				((int)this.func_233637_b_(Attributes.ATTACK_DAMAGE)));
 
 		if (flag) {
 			entityIn.setFire(5);

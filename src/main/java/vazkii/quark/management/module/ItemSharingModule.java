@@ -113,7 +113,7 @@ public class ItemSharingModule extends Module {
 		if (stack.getCount() > 64) {
 			ItemStack copyStack = stack.copy();
 			copyStack.setCount(64);
-			style = style.func_240716_a_(new HoverEvent(HoverEvent.Action.field_230551_b_,
+			style = style.func_240716_a_(new HoverEvent(HoverEvent.Action.SHOW_ITEM,
 					new HoverEvent.ItemHover(copyStack)));
 			component.func_230530_a_(style);
 		}
@@ -177,8 +177,8 @@ public class ItemSharingModule extends Module {
 	private static void render(Minecraft mc, NewChatGui chatGui, int updateCounter, String before, ChatLine line, int lineHeight, ITextComponent component) {
 		Style style = component.getStyle();
 		HoverEvent hoverEvent = style.getHoverEvent();
-		if (hoverEvent != null && hoverEvent.getAction() == HoverEvent.Action.field_230551_b_) {
-			HoverEvent.ItemHover contents = hoverEvent.func_240662_a_(HoverEvent.Action.field_230551_b_);
+		if (hoverEvent != null && hoverEvent.getAction() == HoverEvent.Action.SHOW_ITEM) {
+			HoverEvent.ItemHover contents = hoverEvent.func_240662_a_(HoverEvent.Action.SHOW_ITEM);
 
 			ItemStack stack = contents != null ? contents.func_240689_a_() : ItemStack.EMPTY;
 

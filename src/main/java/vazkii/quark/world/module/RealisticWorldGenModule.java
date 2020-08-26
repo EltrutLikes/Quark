@@ -52,7 +52,7 @@ public class RealisticWorldGenModule extends Module {
 			if (levelType.equals("realistic")) {
 				if (server.func_240793_aU_() instanceof ServerWorldInfo) {
 					ServerWorldInfo worldInfo = (ServerWorldInfo)server.func_240793_aU_();
-					worldInfo.field_237343_c_ = createSettings(worldInfo.field_237343_c_.func_236221_b_(), worldInfo.field_237343_c_.func_236222_c_(), worldInfo.field_237343_c_.func_236223_d_());
+					worldInfo.generatorSettings = createSettings(worldInfo.generatorSettings.func_236221_b_(), worldInfo.generatorSettings.func_236222_c_(), worldInfo.generatorSettings.func_236223_d_());
 				}
 				ServerProperties properties = server.getServerProperties();
 				properties.field_241082_U_ = createSettings(properties.field_241082_U_.func_236221_b_(), properties.field_241082_U_.func_236222_c_(), properties.field_241082_U_.func_236223_d_());
